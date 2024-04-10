@@ -1,8 +1,8 @@
 basic.forever(function () {
-    if (true) {
+    if (maqueen.Ultrasonic(PingUnit.Centimeters) < 0) {
         maqueen.motorStop(maqueen.Motors.All)
     } else {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
     }
-    radio.sendNumber(maqueen.Ultrasonic(PingUnit.Centimeters))
+    basic.showNumber(maqueen.Ultrasonic(PingUnit.Centimeters))
 })
